@@ -3,10 +3,11 @@ require 'sinatra'
 require 'active_record'
 require_relative './app/models/ninja.rb'
 
-ActiveRecord::Base.establish_connection(adapter: 'postgresql')
+ActiveRecord::Base.establish_connection(adapter: 'postgresql',
+                                        database: 'sinatra_skeleton_dev')
 
 get '/' do
-  erb :layout
+  erb :index
 end
 
 post '/' do
