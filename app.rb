@@ -12,7 +12,8 @@ end
 
 post '/' do
   @my_ninja = Ninja.create( {persona: params[:persona], weapon: params[:weapon], strength: params[:strength]} )
-  p "Welcome #{@my_ninja.persona} strength level #{@my_ninja.strength} with weapon #{@my_ninja.weapon}"
+
+  erb :my_ninja
 end
 
 get '/my_ninja' do
