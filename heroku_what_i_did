@@ -1,0 +1,23 @@
+Steps used to push my project to heroku:
+
+rm -rf /users/apprentice/.ssh/id_rsa*
+heroku login
+heroku keys, remove other keys
+heroku keys:remove
+heroku keys:add
+
+gemfile must have the ruby line
+Gemfile.lock must be current
+
+git stores heroku information so may need to delete entire
+application and re-fetch it from the github
+
+heroku create
+git remote -v
+heroku sharing
+git push heroku master
+heroku logs
+
+... next how to have multiple users' ssh keys on same computer
+... should be able to just login and then add the keys and then
+create and push the heroku record
